@@ -2,8 +2,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Car as CarIcon, Users, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import type { Car } from "@/data/cars";
+import { Button } from "@/components/ui/button.tsx";
+import type { Car } from "@/data/cars.ts";
 
 interface CarCardProps {
   car: Car;
@@ -21,7 +21,7 @@ const CarCard: React.FC<CarCardProps> = ({ car }) => {
       {/* Image Container */}
       <div className="h-48 overflow-hidden relative">
         <img
-          src={car.image}
+          src={car.image[0]}
           alt={car.name}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />

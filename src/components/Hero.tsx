@@ -4,6 +4,7 @@ import { ArrowRight, Calendar, Car, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Select } from "@/components/ui/select";
 import { Input } from "@/components/ui/input";
+import {Link} from "react-router-dom";
 
 const Hero: React.FC = () => {
   return (
@@ -27,70 +28,9 @@ const Hero: React.FC = () => {
             </p>
             <div className="flex gap-4 slide-up" style={{animationDelay: '0.4s'}}>
               <Button className="btn-primary">
-                Browse Cars <ArrowRight size={18} />
-              </Button>
-              <Button variant="outline" className="text-white border-white hover:bg-white/20 hover:text-white">
-                Learn More
-              </Button>
-            </div>
-          </div>
-
-          {/* Search Box */}
-          <div className="lg:w-2/5 w-full bg-white rounded-lg p-6 shadow-lg slide-up" style={{animationDelay: '0.6s'}}>
-            <h2 className="text-2xl font-bold text-rentwheels-gray-dark mb-6">
-              Book Your Car Now
-            </h2>
-            <div className="space-y-4">
-              <div className="flex items-center gap-3 p-3 border rounded-md">
-                <MapPin className="text-rentwheels-blue" />
-                <div className="flex-1">
-                  <label className="block text-sm text-gray-500">Pick-up location</label>
-                  <Input 
-                    placeholder="City, Airport, etc."
-                    className="border-none shadow-none focus-visible:ring-0 p-0"
-                  />
-                </div>
-              </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="flex items-center gap-3 p-3 border rounded-md">
-                  <Calendar className="text-rentwheels-blue" />
-                  <div className="flex-1">
-                    <label className="block text-sm text-gray-500">Pick-up date</label>
-                    <Input 
-                      type="date"
-                      className="border-none shadow-none focus-visible:ring-0 p-0"
-                    />
-                  </div>
-                </div>
-                <div className="flex items-center gap-3 p-3 border rounded-md">
-                  <Calendar className="text-rentwheels-blue" />
-                  <div className="flex-1">
-                    <label className="block text-sm text-gray-500">Return date</label>
-                    <Input 
-                      type="date"
-                      className="border-none shadow-none focus-visible:ring-0 p-0"
-                    />
-                  </div>
-                </div>
-              </div>
-              
-              <div className="flex items-center gap-3 p-3 border rounded-md">
-                <Car className="text-rentwheels-blue" />
-                <div className="flex-1">
-                  <label className="block text-sm text-gray-500">Car type</label>
-                  <select className="w-full focus:outline-none text-rentwheels-gray-dark">
-                    <option>All car types</option>
-                    <option>Economy</option>
-                    <option>SUV</option>
-                    <option>Luxury</option>
-                    <option>Sports</option>
-                  </select>
-                </div>
-              </div>
-              
-              <Button className="w-full py-6 bg-rentwheels-blue hover:bg-rentwheels-blue-dark text-white font-medium">
-                Search Available Cars
+                  <Link to="/cars" className="flex items-center gap-2">
+                      Browse Cars <ArrowRight size={18} />
+                  </Link>
               </Button>
             </div>
           </div>

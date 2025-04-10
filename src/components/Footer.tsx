@@ -11,9 +11,9 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <span className="bg-rentwheels-blue p-2 rounded text-white font-bold">RW</span>
+              <span className="bg-rentwheels-blue p-2 rounded text-white font-bold">RMB</span>
               <span className="text-xl font-bold text-white">
-                RentWheels
+                CAR RENTALS
               </span>
             </div>
             <p className="text-gray-400 mb-4">
@@ -49,23 +49,6 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Car Categories */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Car Categories</h3>
-            <ul className="space-y-3">
-              {["Sedan", "SUV", "Electric", "Sports", "Luxury"].map((item) => (
-                <li key={item}>
-                  <Link
-                    to={`/cars?category=${item.toLowerCase()}`}
-                    className="text-gray-400 hover:text-rentwheels-blue transition-colors"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Contact */}
           <div>
             <h3 className="text-xl font-bold mb-4">Contact Us</h3>
@@ -73,16 +56,16 @@ const Footer: React.FC = () => {
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="text-rentwheels-blue mt-1" />
                 <span className="text-gray-400">
-                  1234 Rental Drive, Car City, ST 56789
+                  Asokwa new Road Agenes York plaza
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={20} className="text-rentwheels-blue" />
-                <span className="text-gray-400">+1 (555) 123-4567</span>
+                <span className="text-gray-400">+233 24 264 8325, +233 20 023 8921</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={20} className="text-rentwheels-blue" />
-                <span className="text-gray-400">info@rentwheels.com</span>
+                <span className="text-gray-400">rmbcarrental86@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -90,7 +73,7 @@ const Footer: React.FC = () => {
 
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
-          <p>&copy; {new Date().getFullYear()} RentWheels. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} RMB CAR RENTALS. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -31,11 +31,11 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2 group">
-          <span className="bg-rentwheels-blue p-2 rounded text-white font-bold">RW</span>
+          <span className="bg-rentwheels-blue p-2 rounded text-white font-bold">RMB</span>
           <span className={`text-xl font-bold ${
             isScrolled ? "text-rentwheels-gray-dark" : "text-white"
           } group-hover:text-rentwheels-blue transition-colors`}>
-            RentWheels
+           CAR RENTALS
           </span>
         </Link>
 
