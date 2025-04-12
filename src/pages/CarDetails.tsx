@@ -208,9 +208,9 @@ const CarDetails: React.FC = () => {
                     <div
                         className="fixed inset-0 bg-black/50 backdrop-blur bg-opacity-70 flex justify-center items-center z-50"
                     >
-                        <div className="relative  p-4 rounded-lg max-w-3xl z-[100]">
+                        <div className="relative  p-4 rounded-lg max-w-7xl z-[100]">
                             <button
-                                className="absolute -top-8 -right-4 bg-red-500 text-white p-1.5 rounded-full z-50"
+                                className="absolute -top-8 -right-0 bg-red-500 text-white p-1.5 rounded-full z-50"
                                 onClick={closeModal}
                             >
                                 <XIcon className="w-4 h-4"/>
