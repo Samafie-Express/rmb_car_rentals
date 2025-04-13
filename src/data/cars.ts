@@ -4,7 +4,7 @@ export interface Car {
     brand: string;
     category: string;
     image: string[];
-    price: number;
+    // price: number;
     seats: number;
     transmission: "Automatic" | "Manual";
     fuelType: string;
@@ -34,11 +34,11 @@ export const cars: Car[] = [
             "/image10.jpeg",
             "/image11.jpeg",
         ],
-        price: 89,
+        // price: 89,
         seats: 5,
         transmission: "Automatic",
         fuelType: "Gasoline",
-        year: 2023,
+        year: 2022,
         mileage: "Unlimited",
         features: ["Bluetooth", "Navigation", "Leather Seats", "Backup Camera", "Heated Seats"],
         description: "Experience luxury and performance with the Highlander. This elegant handling with premium comfort for an unforgettable driving experience.",
@@ -52,7 +52,7 @@ export const cars: Car[] = [
         image: [
             "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?q=80&w=2071",
         ],
-        price: 95,
+        // price: 95,
         seats: 5,
         transmission: "Automatic",
         fuelType: "Diesel",
@@ -70,7 +70,7 @@ export const cars: Car[] = [
         image: [
             "https://images.unsplash.com/photo-1606664608405-2f487dea6566?q=80&w=1964",
         ],
-        price: 110,
+        // price: 110,
         seats: 5,
         transmission: "Automatic",
         fuelType: "Gasoline",
@@ -88,7 +88,7 @@ export const cars: Car[] = [
         image: [
             "https://images.unsplash.com/photo-1561580125-028ee3d62101?q=80&w=2070",
         ],
-        price: 120,
+        // price: 120,
         seats: 5,
         transmission: "Automatic",
         fuelType: "Electric",
@@ -106,7 +106,7 @@ export const cars: Car[] = [
         image: [
             "https://images.unsplash.com/photo-1551522435-a13afa10f103?q=80&w=2070",
         ],
-        price: 150,
+        // price: 150,
         seats: 5,
         transmission: "Automatic",
         fuelType: "Gasoline",
@@ -124,7 +124,7 @@ export const cars: Car[] = [
         image: [
             "https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?q=80&w=2070",
         ],
-        price: 65,
+        // price: 65,
         seats: 5,
         transmission: "Automatic",
         fuelType: "Gasoline",
@@ -142,7 +142,7 @@ export const cars: Car[] = [
         image: [
             "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2070",
         ],
-        price: 250,
+        // price: 250,
         seats: 4,
         transmission: "Automatic",
         fuelType: "Gasoline",
@@ -160,7 +160,7 @@ export const cars: Car[] = [
         image: [
             "https://images.unsplash.com/photo-1606016159991-dfe4f2746ad5?q=80&w=2071",
         ],
-        price: 75,
+        // price: 75,
         seats: 5,
         transmission: "Automatic",
         fuelType: "Gasoline",

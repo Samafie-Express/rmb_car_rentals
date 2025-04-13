@@ -152,41 +152,41 @@ const Contact: React.FC = () => {
                 </section>
 
                 {/* FAQ Section */}
-                <section className="py-16 bg-gray-50">
-                    <div className="container mx-auto px-4 md:px-6">
-                        <div className="max-w-3xl mx-auto">
-                            <h2 className="text-2xl md:text-3xl font-bold text-rentwheels-gray-dark text-center mb-12">
-                                Frequently Asked Questions
-                            </h2>
+                {/*<section className="py-16 bg-gray-50">*/}
+                {/*    <div className="container mx-auto px-4 md:px-6">*/}
+                {/*        <div className="max-w-3xl mx-auto">*/}
+                {/*            <h2 className="text-2xl md:text-3xl font-bold text-rentwheels-gray-dark text-center mb-12">*/}
+                {/*                Frequently Asked Questions*/}
+                {/*            </h2>*/}
 
-                            <div className="space-y-6">
-                                {[
-                                    {
-                                        question: "What documents do I need to rent a car?",
-                                        answer: "You'll need a valid driver's license, a major credit card in your name, and proof of insurance. International renters may need to provide a passport and international driver's permit."
-                                    },
-                                    {
-                                        question: "Can I modify or cancel my reservation?",
-                                        answer: "Yes, you can modify or cancel your reservation online or by contacting our customer service. Cancellations made at least 48 hours before pickup time are typically free of charge."
-                                    },
-                                    {
-                                        question: "Is there a mileage limit on rentals?",
-                                        answer: "Most of our standard rentals come with unlimited mileage. However, specialty vehicles and certain promotional rates may have mileage restrictions. The details will be clearly specified in your rental agreement."
-                                    },
-                                    {
-                                        question: "What is your fuel policy?",
-                                        answer: "We provide the vehicle with a full tank of fuel and expect it to be returned with a full tank. If the vehicle is not returned with a full tank, a refueling charge will apply."
-                                    },
-                                ].map((faq, index) => (
-                                    <div key={index} className="bg-white rounded-lg p-6 shadow-sm">
-                                        <h3 className="text-lg font-bold mb-2">{faq.question}</h3>
-                                        <p className="text-gray-600">{faq.answer}</p>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                {/*            <div className="space-y-6">*/}
+                {/*                {[*/}
+                {/*                    {*/}
+                {/*                        question: "What documents do I need to rent a car?",*/}
+                {/*                        answer: "You'll need a valid driver's license, a major credit card in your name, and proof of insurance. International renters may need to provide a passport and international driver's permit."*/}
+                {/*                    },*/}
+                {/*                    {*/}
+                {/*                        question: "Can I modify or cancel my reservation?",*/}
+                {/*                        answer: "Yes, you can modify or cancel your reservation online or by contacting our customer service. Cancellations made at least 48 hours before pickup time are typically free of charge."*/}
+                {/*                    },*/}
+                {/*                    {*/}
+                {/*                        question: "Is there a mileage limit on rentals?",*/}
+                {/*                        answer: "Most of our standard rentals come with unlimited mileage. However, specialty vehicles and certain promotional rates may have mileage restrictions. The details will be clearly specified in your rental agreement."*/}
+                {/*                    },*/}
+                {/*                    {*/}
+                {/*                        question: "What is your fuel policy?",*/}
+                {/*                        answer: "We provide the vehicle with a full tank of fuel and expect it to be returned with a full tank. If the vehicle is not returned with a full tank, a refueling charge will apply."*/}
+                {/*                    },*/}
+                {/*                ].map((faq, index) => (*/}
+                {/*                    <div key={index} className="bg-white rounded-lg p-6 shadow-sm">*/}
+                {/*                        <h3 className="text-lg font-bold mb-2">{faq.question}</h3>*/}
+                {/*                        <p className="text-gray-600">{faq.answer}</p>*/}
+                {/*                    </div>*/}
+                {/*                ))}*/}
+                {/*            </div>*/}
+                {/*        </div>*/}
+                {/*    </div>*/}
+                {/*</section>*/}
             </main>
             <Footer/>
         </>

@@ -1,7 +1,19 @@
 import React, {useEffect, useState} from "react";
 import {useNavigate, useParams} from "react-router-dom";
 import {getCarById} from "@/data/cars";
-import {ArrowLeft, ArrowRight, Calendar, Car, Check, ChevronLeft, ChevronRight, Fuel, Users, XIcon} from "lucide-react";
+import {
+    ArrowLeft,
+    ArrowRight,
+    Calendar,
+    Car,
+    Check,
+    ChevronLeft,
+    ChevronRight,
+    Fuel,
+    Phone,
+    Users,
+    XIcon
+} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -138,10 +150,10 @@ const CarDetails: React.FC = () => {
                                         <h1 className="text-3xl font-bold text-rentwheels-gray-dark">{car.name}</h1>
                                         <p className="text-gray-500">{car.brand} · {car.category}</p>
                                     </div>
-                                    <div className="text-2xl font-bold text-rentwheels-blue">
-                                        ${car.price}
-                                        <span className="text-sm font-normal text-gray-500">/day</span>
-                                    </div>
+                                    {/*<div className="text-2xl font-bold text-rentwheels-blue">*/}
+                                    {/*    ${car.price}*/}
+                                    {/*    <span className="text-sm font-normal text-gray-500">/day</span>*/}
+                                    {/*</div>*/}
                                 </div>
 
                                 <div className="mb-6">
@@ -162,27 +174,38 @@ const CarDetails: React.FC = () => {
                                 </div>
 
                                 <div className="pt-4 border-t">
-                                    <h3 className="font-bold text-lg mb-4">Book this car</h3>
-                                    <div className="grid grid-cols-2 gap-4 mb-4">
-                                        <div>
-                                            <label className="block text-sm mb-1">Pick-up Date</label>
-                                            <input
-                                                type="date"
-                                                className="w-full p-2 border rounded-md"
-                                            />
+                                    <h3 className="font-bold text-lg mb-4">Contact us</h3>
+
+                                    <div className="flex items-start gap-4">
+                                        <div className="bg-rentwheels-blue p-3 rounded-lg">
+                                            <Phone className="text-white"/>
                                         </div>
                                         <div>
-                                            <label className="block text-sm mb-1">Return Date</label>
-                                            <input
-                                                type="date"
-                                                className="w-full p-2 border rounded-md"
-                                            />
+                                            <h3 className="font-semibold text-lg">Phone Number</h3>
+                                            <p className="text-gray-600 mt-1">+233 24 264 8325,     +233 20 023 8921</p>
                                         </div>
                                     </div>
-                                    <Button
-                                        className="w-full bg-rentwheels-blue hover:bg-rentwheels-blue-dark text-white py-6">
-                                        Book Now <ArrowRight size={16}/>
-                                    </Button>
+                                    {/*<h3 className="font-bold text-lg mb-4">Book this car</h3>*/}
+                                    {/*<div className="grid grid-cols-2 gap-4 mb-4">*/}
+                                    {/*    <div>*/}
+                                    {/*        <label className="block text-sm mb-1">Pick-up Date</label>*/}
+                                    {/*        <input*/}
+                                    {/*            type="date"*/}
+                                    {/*            className="w-full p-2 border rounded-md"*/}
+                                    {/*        />*/}
+                                    {/*    </div>*/}
+                                    {/*    <div>*/}
+                                    {/*        <label className="block text-sm mb-1">Return Date</label>*/}
+                                    {/*        <input*/}
+                                    {/*            type="date"*/}
+                                    {/*            className="w-full p-2 border rounded-md"*/}
+                                    {/*        />*/}
+                                    {/*    </div>*/}
+                                    {/*</div>*/}
+                                    {/*<Button*/}
+                                    {/*    className="w-full bg-rentwheels-blue hover:bg-rentwheels-blue-dark text-white py-6">*/}
+                                    {/*    Book Now <ArrowRight size={16}/>*/}
+                                    {/*</Button>*/}
                                 </div>
                             </div>
 

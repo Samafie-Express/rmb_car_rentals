@@ -1,13 +1,13 @@
 
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  const location = useLocation();
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -33,7 +33,7 @@ const Header: React.FC = () => {
         <Link to="/" className="flex items-center gap-2 group">
           <span className="bg-rentwheels-blue p-2 rounded text-white font-bold">RMB</span>
           <span className={`text-xl font-bold ${
-            isScrolled ? "text-rentwheels-gray-dark" : "text-white"
+              location.pathname !== "/" || isScrolled ?  "text-rentwheels-gray-dark" : "text-white"
           } group-hover:text-rentwheels-blue transition-colors`}>
            CAR RENTALS
           </span>
@@ -44,7 +44,7 @@ const Header: React.FC = () => {
           <Link 
             to="/"
             className={`font-medium transition-colors hover:text-rentwheels-blue ${
-              isScrolled ? "text-gray-700" : "text-white"
+                location.pathname !== "/" || isScrolled ? "text-gray-700" : "text-white"
             }`}
           >
             Home
@@ -52,30 +52,30 @@ const Header: React.FC = () => {
           <Link 
             to="/cars"
             className={`font-medium transition-colors hover:text-rentwheels-blue ${
-              isScrolled ? "text-gray-700" : "text-white"
+                location.pathname !== "/" || isScrolled ? "text-gray-700" : "text-white"
             }`}
           >
             Cars
           </Link>
-          <Link 
-            to="/about"
-            className={`font-medium transition-colors hover:text-rentwheels-blue ${
-              isScrolled ? "text-gray-700" : "text-white"
-            }`}
-          >
-            About
-          </Link>
+          {/*<Link */}
+          {/*  to="/about"*/}
+          {/*  className={`font-medium transition-colors hover:text-rentwheels-blue ${*/}
+          {/*    isScrolled ? "text-gray-700" : "text-white"*/}
+          {/*  }`}*/}
+          {/*>*/}
+          {/*  About*/}
+          {/*</Link>*/}
           <Link 
             to="/contact"
             className={`font-medium transition-colors hover:text-rentwheels-blue ${
-              isScrolled ? "text-gray-700" : "text-white"
+                location.pathname !== "/" || isScrolled ? "text-gray-700" : "text-white"
             }`}
           >
             Contact
           </Link>
-          <Button className="bg-rentwheels-blue hover:bg-rentwheels-blue-dark text-white">
-            Book Now
-          </Button>
+          {/*<Button className="bg-rentwheels-blue hover:bg-rentwheels-blue-dark text-white">*/}
+          {/*  Book Now*/}
+          {/*</Button>*/}
         </nav>
 
         {/* Mobile Menu Button */}
@@ -84,9 +84,9 @@ const Header: React.FC = () => {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? (
-            <X className={isScrolled ? "text-gray-700" : "text-white"} />
+            <X className={location.pathname !== "/" || isScrolled ? "text-gray-700" : "text-white"} />
           ) : (
-            <Menu className={isScrolled ? "text-gray-700" : "text-white"} />
+            <Menu className={location.pathname !== "/" || isScrolled ? "text-gray-700" : "text-white"} />
           )}
         </button>
 
@@ -122,9 +122,9 @@ const Header: React.FC = () => {
               >
                 Contact
               </Link>
-              <Button className="bg-rentwheels-blue hover:bg-rentwheels-blue-dark text-white self-start">
-                Book Now
-              </Button>
+              {/*<Button className="bg-rentwheels-blue hover:bg-rentwheels-blue-dark text-white self-start">*/}
+              {/*  Book Now*/}
+              {/*</Button>*/}
             </div>
           </div>
         )}

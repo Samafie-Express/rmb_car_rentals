@@ -24,21 +24,21 @@ const FeaturedCars: React.FC = () => {
             </div>
 
             {/* Category filter */}
-            <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
-                {categories.map((category) => (
-                    <button
-                        key={category}
-                        className={`px-4 py-2 rounded-full text-sm md:text-base transition-all duration-300 ${
-                            activeCategory === category
-                                ? "bg-rentwheels-blue text-white"
-                                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-                        }`}
-                        onClick={() => setActiveCategory(category)}
-                    >
-                        {category}
-                    </button>
-                ))}
-            </div>
+            {/*<div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">*/}
+            {/*    {categories.map((category) => (*/}
+            {/*        <button*/}
+            {/*            key={category}*/}
+            {/*            className={`px-4 py-2 rounded-full text-sm md:text-base transition-all duration-300 ${*/}
+            {/*                activeCategory === category*/}
+            {/*                    ? "bg-rentwheels-blue text-white"*/}
+            {/*                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"*/}
+            {/*            }`}*/}
+            {/*            onClick={() => setActiveCategory(category)}*/}
+            {/*        >*/}
+            {/*            {category}*/}
+            {/*        </button>*/}
+            {/*    ))}*/}
+            {/*</div>*/}
 
             {/* Car grid with animation */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">

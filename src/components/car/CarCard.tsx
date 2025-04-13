@@ -25,9 +25,9 @@ const CarCard: React.FC<CarCardProps> = ({ car }) => {
           alt={car.name}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
         />
-        <div className="absolute top-4 left-4 bg-rentwheels-blue text-white py-1 px-3 rounded-full text-sm font-medium">
-          ${car.price}/day
-        </div>
+        {/*<div className="absolute top-4 left-4 bg-rentwheels-blue text-white py-1 px-3 rounded-full text-sm font-medium">*/}
+        {/*  ${car.price}/day*/}
+        {/*</div>*/}
       </div>
 
       {/* Content */}
