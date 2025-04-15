@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import Header from "@/components/Header.tsx";
 import {allCarImages, cars} from "@/data/cars.ts";
 import {ChevronLeft, ChevronRight, XIcon} from "lucide-react";
@@ -30,6 +30,11 @@ const Gallery = () => {
         return car ? car.image[0] === allCarImages[index] : false;
 
     }
+    // Scroll to top on mount
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <>
             <Header/>
