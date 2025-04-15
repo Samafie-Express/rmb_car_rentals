@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import Header from "@/components/Header.tsx";
 import {allCarImages} from "@/data/cars.ts";
 import {ChevronLeft, ChevronRight, XIcon} from "lucide-react";
+import Footer from "@/components/Footer.tsx";
 
 const Gallery = () => {
 
@@ -95,6 +96,7 @@ const Gallery = () => {
                     )}
                 </section>
             </main>
+            <Footer/>
         </>
     )
 }
