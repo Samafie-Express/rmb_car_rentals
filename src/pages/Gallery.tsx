@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import Header from "@/components/Header.tsx";
-import {allCarImages, cars} from "@/data/cars.ts";
+import {allCarImages} from "@/data/cars.ts";
 import {ChevronLeft, ChevronRight, XIcon} from "lucide-react";
 
 const Gallery = () => {
@@ -25,11 +25,6 @@ const Gallery = () => {
         setSelectedImageIndex((prevIndex) => (prevIndex !== null && prevIndex < (allCarImages?.length ?? 1) - 1 ? prevIndex + 1 : 0));
     };
 
-    const isMain = (index: number) => {
-        const car = cars.find(car => car.image.includes(allCarImages[index]));
-        return car ? car.image[0] === allCarImages[index] : false;
-
-    }
     // Scroll to top on mount
     useEffect(() => {
         window.scrollTo(0, 0);

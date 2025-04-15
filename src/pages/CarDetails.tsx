@@ -3,7 +3,6 @@ import {useNavigate, useParams} from "react-router-dom";
 import {getCarById} from "@/data/cars";
 import {
     ArrowLeft,
-    ArrowRight,
     Calendar,
     Car,
     Check,
