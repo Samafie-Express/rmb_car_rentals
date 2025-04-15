@@ -133,3 +133,36 @@ export const cars: Car[] = [
 export const getCarById = (id: number): Car | undefined => {
     return cars.find(car => car.id === id);
 };
+
+
+export const allCarImages = [
+    "/cars/WhatsApp Image 2025-04-15 at 12.51.04 PM.jpeg",
+    "/cars/highlander-2022-1.jpeg",
+    "/cars/highlander-2022-2.jpeg",
+    "/cars/highlander-2022-3.jpeg",
+    "/cars/highlander-2022-4.jpeg",
+    "/cars/highlander-2022-5.jpeg",
+    "/cars/highlander-2022-6.jpeg",
+    "/cars/highlander-2022-7.jpeg",
+    "/cars/highlander-2022-8.jpeg",
+    "/cars/highlander-2022-9.jpeg",
+    "/cars/highlander-2022-10.jpeg",
+    "/cars/highlander-2022-11.jpeg",
+    "/cars/honda.jpeg",
+    "/cars/land-cruiser-2023-1.jpeg",
+    "/cars/land-cruiser-2023-2.jpeg",
+    "/cars/land-cruiser-2023-3.jpeg",
+    "/cars/land-cruiser-2023-4.jpeg",
+    "/cars/land-cruiser-2023-5.jpeg",
+    "/cars/land-cruiser-2023-6.jpeg",
+    "/cars/RAV4-2025-2.jpeg",
+    "/cars/RAV4-2025-3.jpeg",
+    "/cars/RAV4-2025-4.jpeg",
+    "/cars/RAV4-2025-5.jpeg",
+    "/cars/RAV4-2025-6.jpeg",
+    "/cars/RAV4-2025-7.jpeg",
+    "/cars/RAV4-2025-8.jpeg",
+    "/cars/toyota-2025-1.jpeg",
+    "/cars/toyota-2025-2.jpeg",
+    "/cars/WhatsApp Image 2025-04-15 at 12.51.04 PM (1).jpeg",
+];
