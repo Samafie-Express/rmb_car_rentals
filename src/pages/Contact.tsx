@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import {Clock, Mail, MapPin, Phone} from "lucide-react";
+import {ArrowLeft, Clock, Mail, MapPin, Phone} from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import {Button} from "@/components/ui/button";
@@ -7,11 +7,33 @@ import {Label} from "@/components/ui/label";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 
+import {useForm} from '@formspree/react';
+import {Link} from "react-router-dom";
+
 const Contact: React.FC = () => {
+    const [state, handleSubmit] = useForm("myzeqnvo");
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
+    if (state.succeeded) {
+        return (
+            <div className="">
+                <div className="section-padding pt-8 pb-0">
+                    <Link to="/">
+                        <Button
+                            variant="ghost"
+                            className="flex items-center gap-2 hover:bg-gray-100"
+                        >
+                            <ArrowLeft size={18}/> Home
+                        </Button>
+                    </Link>
+                </div>
+                <p className="font-semibold px-4">Message sent successfully, we'll contact you soon!</p>
+            </div>
+        )
+    }
 
     return (
         <>
@@ -73,7 +95,8 @@ const Contact: React.FC = () => {
                                             </div>
                                             <div>
                                                 <h3 className="font-semibold text-lg">Phone Number</h3>
-                                                <p className="text-gray-600 mt-1">+233 24 264 8325, <br/> +233 20 023 8921</p>
+                                                <p className="text-gray-600 mt-1">+233 24 264 8325, <br/> +233 20 023
+                                                    8921</p>
                                             </div>
                                         </div>
 
@@ -108,39 +131,46 @@ const Contact: React.FC = () => {
                                 <h2 className="text-2xl font-bold text-rentwheels-gray-dark mb-6">
                                     Send Us a Message
                                 </h2>
-                                <form className="space-y-6">
+                                <form
+                                    onSubmit={handleSubmit}
+                                    className="space-y-6">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                         <div className="space-y-2">
                                             <Label htmlFor="name">Full Name</Label>
-                                            <Input id="name" placeholder="Your name"/>
+                                            <Input id="name" name="name" placeholder="Your name" required={true}/>
                                         </div>
                                         <div className="space-y-2">
                                             <Label htmlFor="email">Email</Label>
-                                            <Input id="email" type="email" placeholder="Your email"/>
+                                            <Input id="email" name="email" type="email" placeholder="Your email"
+                                                   required={true}/>
                                         </div>
                                     </div>
 
                                     <div className="space-y-2">
                                         <Label htmlFor="phone">Phone Number</Label>
-                                        <Input id="phone" placeholder="Your phone number"/>
+                                        <Input id="phone" name="phone" placeholder="Your phone number" required={true}/>
                                     </div>
 
                                     <div className="space-y-2">
                                         <Label htmlFor="subject">Subject</Label>
-                                        <Input id="subject" placeholder="How can we help you?"/>
+                                        <Input id="subject" name="subject" placeholder="How can we help you?"
+                                               required={true}/>
                                     </div>
 
                                     <div className="space-y-2">
                                         <Label htmlFor="message">Message</Label>
                                         <Textarea
                                             id="message"
+                                            name="message"
                                             placeholder="Tell us more about your inquiry"
                                             className="min-h-[120px]"
+                                            required={true}
                                         />
                                     </div>
 
                                     <Button
                                         type="submit"
+                                        disabled={state.submitting}
                                         className="w-full bg-rentwheels-blue hover:bg-rentwheels-blue-dark"
                                     >
                                         Send Message
